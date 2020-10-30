@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 
-const config = require('./config.json');
-
 const client = new Discord.Client();
 
 client.once('ready', () => {
@@ -11,6 +9,10 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+
+  const prefix = 'hub '
+
+  const coin = ['you got heads', 'you got tails']
 
     if (message.content === 'blip') {
 

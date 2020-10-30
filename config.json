@@ -1,6 +1,6 @@
 {
 
-    "prefix": "hub"
+    "prefix": "hub",
 
     "coin": ["you got heads", "you got tails"]
 

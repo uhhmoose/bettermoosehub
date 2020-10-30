@@ -6,7 +6,7 @@ client.once('ready', () => {
 
     if (message.content === 'ping') {
 
-       message.channel.send('pong');
+       message.channel.reply('pong');
 
        }
 

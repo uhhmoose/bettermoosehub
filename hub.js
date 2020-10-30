@@ -8,5 +8,11 @@ client.once('ready', () => {
 
 });
 
+client.on('message', message => {
+
+    console.log(message.content);
+
+});
+
 client.login(process.env.BOT_TOKEN);
 

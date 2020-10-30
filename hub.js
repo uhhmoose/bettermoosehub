@@ -14,6 +14,12 @@ client.on('message', message => {
 
   const coin = ['you got heads', 'you got tails']
 
+    if (message.content === prefix + message) {
+
+       console.log(message.content)
+
+       }
+
     if (message.content === 'blip') {
 
        message.channel.send('blop');

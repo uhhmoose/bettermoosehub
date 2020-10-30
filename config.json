@@ -1,4 +1,4 @@
-const prefix = 'hub '
+const prefix = "hub "
 
 const coin = ["you got heads", 
 

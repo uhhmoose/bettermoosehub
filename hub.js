@@ -8,3 +8,5 @@ client.once('ready', () => {
 
 });
 
+client.login('BOT_TOKEN')
+

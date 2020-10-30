@@ -14,7 +14,7 @@ client.on('message', message => {
 
   const coin = ['you got heads', 'you got tails']
 
-    if (message.content === prefix + message) {
+    if (message.content.includes(prefix)) {
 
        console.log(message.content)
 

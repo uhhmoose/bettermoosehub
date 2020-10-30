@@ -1,7 +1,5 @@
-{
+const prefix = 'hub '
 
-    const prefix = 'hub '
+const coin = ['you got heads', 'you got tails']
 
-    const coin = ['you got heads', 'you got tails']
 
-}

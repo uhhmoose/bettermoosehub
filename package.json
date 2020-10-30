@@ -6,11 +6,11 @@
 
   "version": "0.0.0",
 
-  "main": "bot.js",
+  "main": "hub.js",
 
   "scripts": {
 
-    "start": "node bot.js"
+    "start": "node hub.js"
 
   },
 

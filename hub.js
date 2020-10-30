@@ -24,7 +24,7 @@ client.on('message', message => {
 
        const random = Math.floor(Math.random()*coin.length);
 
-       message.channel.reply(coin[random]);
+       message.reply(coin[random]);
 
        }
 

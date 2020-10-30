@@ -1,7 +1,7 @@
 {
 
-    "prefix": "hub",
+    const prefix = 'hub '
 
-    "coin": ["you got heads", "you got tails"]
+    const coin = ['you got heads', 'you got tails']
 
 }

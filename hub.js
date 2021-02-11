@@ -36,26 +36,10 @@ client.on('message', message => {
     
     if (message.content === prefix + 'sing emo boy') {
         
-        message.channel.send('hey emo boy 
-                             'hey hey emo boy 
-                             'hey emo boy 
-                             'hey hey emo boy 
-                             'hey emo boy
-                             'hey hey emo boy 
-                             'hey emo boy 
-                             'hey hey emo boy 
-                             'hey emo boy 
-                             'hey hey emo boy
-                             'saw this boy at the mall last week 
-                             'got the kind of look to make me freak 
-                             'that long ass hair and his tightest jeans 
-                             'with my chemical romance on his tee
-                             'he looks so sick like he was dying
-                             'if i said he wasn\'t hot then i\'d be lying 
-                             'please handsome don\'t be coy
-                             'come on fuck me emo boy')
+        message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAH')
+        
     }
-    
+
 });
 
 client.login(process.env.BOT_TOKEN);

@@ -29,11 +29,14 @@ client.on('message', message => {
     if (message.content === prefix + 'flip a coin') {
 
        const random = Math.floor(Math.random()*coin.length);
-
+        
        message.reply(coin[random]);
 
        }
-
+    if (message.content === prefix + 'sing emo boy')
+        
+        message.channel.send('idk the lyrics yet pls')
+    
 });
 
 client.login(process.env.BOT_TOKEN);

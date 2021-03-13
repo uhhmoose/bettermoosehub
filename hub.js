@@ -27,7 +27,7 @@ client.on('message', message => {
     for (const word in args) {
       announcement = announcement + args[word] + " ";
     }
-    return announceChannel.send(announcement)
+    message.announceChannel.send(announcement)
   }
     
 });

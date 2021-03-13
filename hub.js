@@ -60,7 +60,6 @@ client.on('message', message => {
 
         channel.send(announcement);
     }
-}
 
 });
 

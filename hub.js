@@ -15,7 +15,7 @@ client.on('message', message => {
   const prefix = 'hub '
 
   const coin = ['you got heads', 'you got tails']
-
+  
     if (message.content.includes(prefix)) {
 
        console.log(message.content)
@@ -41,6 +41,26 @@ client.on('message', message => {
         message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAH')
         
     }
+    
+    if (message.author.bot) return;
+
+    let messageArray = message.content.split(" ");
+    
+    let command = messageArray[0];
+    
+    let args = messageArray.slice(1);
+
+    if(message.channel.type === "dm") return;
+
+    if(!message.content.startsWith('hub')) return;
+
+    if(command === 'hub announce') {
+        let channel = message.mentions.channels();
+        let announcement = args.slice(1).join(" ");
+
+        channel.send(announcement);
+    }
+}
 
 });
 

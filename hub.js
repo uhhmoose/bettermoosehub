@@ -15,19 +15,18 @@ client.on('message', message => {
   const prefix = 'hub '
 
   const coin = ['you got heads', 'you got tails']
-  
-  const announceChannel = client.channels.cache.get('771689620118437908');
     
   const args = message.content.slice(1).trim().split(' ');
     
   const command = args.shift().toLowerCase();
 
   if (command === "hubannounce") {
+    let annchannel = client.channels.cache.get('771689620118437908');
     var announcement = "";
     for (const word in args) {
       announcement = announcement + args[word] + " ";
     }
-    message.announceChannel.send(announcement)
+    message.annchannel.send(announcement)
   }
     
 });

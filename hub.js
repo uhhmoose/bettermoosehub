@@ -16,21 +16,18 @@ client.on('message', message => {
 
   const coin = ['you got heads', 'you got tails']
   
-    if(message.author.bot) return;
-
-    let messageArray = message.content.split(" ");
-    let command = messageArray[0];
-    let args = messageArray.slice(1);
-
-    if(message.channel.type === "dm") return;
-
-    if(!message.content.startsWith('hub')) return;
-
-    if(command === 'hubannounce') {
-        let channel = message.mentions.channels();
-        let announcement = args.slice(1).join(" ");
-
-        channel.send(announcement);
+  const announceChannel = client.channels.cache.get('771689620118437908');
+    
+  const messageArray = message.content.split(" ");
+  const command = messageArray[1];
+  const args = messageArray.slice(2);  
+    
+    if (message.content === prefix + 'announce') {
+        
+        const announcement = args.slice(2).join(" ");
+        
+        announceChannel.send(announcement);
+        
     }
   
     if (message.content.includes(prefix)) {

@@ -19,43 +19,19 @@ client.on('message', message => {
   const announceChannel = client.channels.cache.get('771689620118437908');
     
   const messageArray = message.content.split(" ");
-  const command = messageArray[1];
-  const args = messageArray.slice(2);  
     
-    if (message.content === prefix + 'announce') {
+  const command = messageArray[0];
+    
+  const args = messageArray.slice(1);  
+    
+    if (command = 'hubannnounce') {
         
-        const announcement = args.slice(2).join(" ");
+        const announcement = args.slice(1).join(" ");
         
         announceChannel.send(announcement);
         
     }
   
-    if (message.content.includes(prefix)) {
-
-       console.log(message.content)
-
-       }
-
-    if (message.content === 'blip') {
-
-       message.channel.send('blop');
-
-       }
-
-    if (message.content === prefix + 'flip a coin') {
-
-       const random = Math.floor(Math.random()*coin.length);
-        
-       message.reply(coin[random]);
-
-       }
-    
-    if (message.content === prefix + 'sing emo boy') {
-        
-        message.channel.send('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAH')
-        
-    }
-    
 });
 
 client.login(process.env.BOT_TOKEN);

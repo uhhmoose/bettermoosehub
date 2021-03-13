@@ -54,7 +54,7 @@ client.on('message', message => {
 
     if(!message.content.startsWith('hub')) return;
 
-    if(command === 'hub announce') {
+    if(message.content === prefix + 'announce') {
         let channel = message.mentions.channels();
         let announcement = args.slice(1).join(" ");
 

@@ -22,7 +22,7 @@ client.on('message', message => {
     
   const command = args.shift().toLowerCase();
 
-  if (command == "hubannounce") {
+  if (command === "hubannounce") {
     var announcement = "";
     for (const word in args) {
       announcement = announcement + args[word] + " ";

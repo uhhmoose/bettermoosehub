@@ -6,7 +6,7 @@ client.once('ready', () => {
 
     console.log('i\'m ready for duty!');
 
-    client.user.setActivity('Apex Legends', {type: 'Playing'});
+    client.user.setActivity('Apex Legends', { type: 'PLAYING' });
 
 });
 

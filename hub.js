@@ -24,7 +24,7 @@ client.on('message', message => {
     
   const args = messageArray.slice(1);  
     
-    if (command = 'hubannnounce') {
+    if (command === 'hubannnounce') {
         
         const announcement = args.slice(1).join(" ");
         

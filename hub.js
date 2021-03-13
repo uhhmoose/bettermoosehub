@@ -18,20 +18,18 @@ client.on('message', message => {
   
   const announceChannel = client.channels.cache.get('771689620118437908');
     
-  const messageArray = message.content.split(" ");
+  const args = message.content.slice(1).trim().split(' ');
     
-  const command = messageArray[0];
-    
-  const args = messageArray.slice(1);  
-    
-    if (command === 'hubannnounce') {
-        
-        const announcement = args.slice(1).join(" ");
-        
-        announceChannel.send(announcement);
-        
+  const command = args.shift().toLowerCase();
+
+  if (command == "hubannounce") {
+    var announcement = "";
+    for (const word in args) {
+      announcement = announcement + args[word] + " ";
     }
-  
+    announceChannel.send(announcement)
+  }
+    
 });
 
 client.login(process.env.BOT_TOKEN);

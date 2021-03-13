@@ -24,7 +24,7 @@ client.on('message', message => {
 
     if(message.channel.type === "dm") return;
 
-    if(command === 'hub announce') {
+    if(command === 'hubannounce') {
         let channel = message.mentions.channels();
         let announcement = args.slice(1).join(" ");
 

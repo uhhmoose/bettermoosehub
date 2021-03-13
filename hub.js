@@ -52,8 +52,6 @@ client.on('message', message => {
 
     if(message.channel.type === "dm") return;
 
-    if(!message.content.startsWith('hub')) return;
-
     if(message.content === prefix + 'announce') {
         let channel = message.mentions.channels();
         let announcement = args.slice(1).join(" ");

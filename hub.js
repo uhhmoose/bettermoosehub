@@ -12,13 +12,21 @@ client.once('ready', () => {
 
 client.on('message', message => {
 
-  const prefix = 'h! '
+  const prefix = 'h!'
+  
+  const messageArray = message.content.split(' ');
+  
+  const command = messageArray[0];
+  
+  const args = messageArray.slice(1);
   
   if (message.author.bot) return;
     
     if (message.content.includes(prefix + 'announce')) {
         
-        client.channels.cache.get(`771689620118437908`).send(message.content);
+        const announcement = args.slice(1).join(' ');
+        
+        client.channels.cache.get(`771689620118437908`).send(announcement);
         
     }
     

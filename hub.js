@@ -14,7 +14,7 @@ client.on('message', message => {
 
   const prefix = 'h! '
   
-  if message.author.bot: return;
+  if (message.author.bot) return;
     
     if (message.content.includes(prefix + 'announce')) {
         

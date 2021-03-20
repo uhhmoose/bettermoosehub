@@ -22,7 +22,7 @@ client.on('message', message => {
   
   if (message.author.bot) return;
     
-    if (message.content.includes(prefix + 'announce')) {
+    if (command === 'h!announce') {
         
         const announcement = args.slice(1).join(' ');
         

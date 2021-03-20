@@ -21,8 +21,10 @@ client.on('message', message => {
   const args = messageArray.slice(1);
   
   if (message.author.bot) return;
+  
+  if (!message.member.roles.some(role => role.name === 'announcer role') return; 
     
-    if (command === 'h!announce') {
+     if (command === 'h!announce') {
         
         const announcement = args.slice(1).join(' ');
         

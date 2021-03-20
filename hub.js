@@ -26,7 +26,9 @@ client.on('message', message => {
         
         const announcement = args.slice(1).join(' ');
         
-        client.channels.cache.get(`771689620118437908`).send(announcement);
+        const annChannel = message.mentions.channels();
+        
+        annChannel.send(announcement);
         
     }
     

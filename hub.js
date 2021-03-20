@@ -22,7 +22,7 @@ client.on('message', message => {
   
   if (message.author.bot) return;
   
-  if (!message.member.roles.cache.some('820222586335395880')) return;  
+  if (!message.member.roles.cache.find('820222586335395880')) return;  
       
     
      if (command === 'h!announce') {

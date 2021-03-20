@@ -22,7 +22,7 @@ client.on('message', message => {
     
   if (message.author.bot) return;
   
-  if (message.guild.id !== '820222586335395880') return;
+  if (!message.member.roles.cache.has(config["announcer role"]) return;
    
      if (command === 'h!announce') {
          

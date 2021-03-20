@@ -18,13 +18,11 @@ client.on('message', message => {
   
   const command = messageArray[0];
   
-  const args = messageArray.slice(1);
-  
-  const annRole = message.guild.roles.find('announcer role', 'announcer');  
+  const args = messageArray.slice(1);  
     
   if (message.author.bot) return;
   
-  if (!message.member.roles.has(annRole.id)) return;
+  if (message.guild.id !== '820222586335395880') return;
    
      if (command === 'h!announce') {
          

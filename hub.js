@@ -20,12 +20,13 @@ client.on('message', message => {
   
   const args = messageArray.slice(1);
   
+  const annRole = message.guild.roles.find('announcer role', 'announcer');  
+    
   if (message.author.bot) return;
   
-    
-      
-    
+   
      if (command === 'h!announce') {
+        if (message.member.roles.has(annRole.id) { 
         
         const announcement = args.slice(1).join(' ');
         
@@ -33,9 +34,10 @@ client.on('message', message => {
         
         annChannel.send(announcement);
         
-    }
-    
-    
+    } else { message.channel.send('you don\'nt have announcer role')
+
+}
+        
 });
 
 client.login(process.env.BOT_TOKEN);

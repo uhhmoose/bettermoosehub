@@ -12,7 +12,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
 
-  const prefix = 'h!'
+  const prefix = 'h! '
     
     if (message.content === prefix + 'announce') {
         

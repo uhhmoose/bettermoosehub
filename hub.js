@@ -16,11 +16,7 @@ client.on('message', message => {
     
     if (message.content === prefix + 'announce') {
         
-        let saymsg = message.content;
-        
-        message.channel.send(saymsg.replace('h!say',''));
-        
-        message.delete({timeout: 1}); 
+        client.channels.cache.get(`771689620118437908`).send(message.content);
         
     }
     

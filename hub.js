@@ -24,19 +24,16 @@ client.on('message', message => {
     
   if (message.author.bot) return;
   
+  if (!message.member.roles.has(annRole.id)) return;
    
      if (command === 'h!announce') {
-        if (message.member.roles.has(annRole.id) { 
-        
+         
         const announcement = args.slice(1).join(' ');
         
         const annChannel = message.mentions.channels.first();
         
-        annChannel.send(announcement);
-        
-    } else { message.channel.send('you don\'nt have announcer role')
-
-}
+        annChannel.send(announcement); 
+     }
         
 });
 

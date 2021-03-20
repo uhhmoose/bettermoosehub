@@ -26,7 +26,7 @@ client.on('message', message => {
         
         const announcement = args.slice(1).join(' ');
         
-        const annChannel = message.mentions.channels();
+        const annChannel = message.mentions.channels.first();
         
         annChannel.send(announcement);
         

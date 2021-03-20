@@ -22,7 +22,8 @@ client.on('message', message => {
   
   if (message.author.bot) return;
   
-  if (!message.member.roles.some(role => role.name === 'announcer role') return; 
+  if (!message.member.roles.some(role => role.name === 'announcer role') { return;
+      }
     
      if (command === 'h!announce') {
         

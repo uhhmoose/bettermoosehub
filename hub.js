@@ -18,7 +18,7 @@ client.on('message', message => {
         
         let saymsg = message.content;
         
-        message.channel.send(saymsg.replace('h!say','');
+        message.channel.send(saymsg.replace('h!say',''));
         
         message.delete({timeout: 1}); 
         

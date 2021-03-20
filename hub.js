@@ -16,7 +16,7 @@ client.on('message', message => {
     
     if (message.content === prefix + 'announce') {
         
-        client.channels.cache.get(`771689620118437908`).send(message.content);
+        client.channels.cache.get(channel => channel.name === '➺moosehub-tests').send(message.content);
         
     }
     

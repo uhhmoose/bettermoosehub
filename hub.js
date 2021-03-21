@@ -22,7 +22,7 @@ client.on('message', message => {
     
   if (message.author.bot) return;
   
-     if (command === 'h!announce') {
+    if (command === 'h!announce') {
         
         if (message.member.roles.cache.some(role => role.name === 'announcer role')) {
             
@@ -44,8 +44,17 @@ client.on('message', message => {
         } else { return; 
                }
     }
+    if (command === 'h!coinflip') {
+
+        const coin = ['you got heads', 'you got tails'];
+
+        const random = Math.floor(Math.random()*coin.length);
+
+        message.reply(coin[random]);
+        
+    }
+    
     
 });
 
 client.login(process.env.BOT_TOKEN);
-

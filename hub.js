@@ -22,15 +22,17 @@ client.on('message', message => {
     
   if (message.author.bot) return;
   
-  if (!message.member.roles.cache.has(config["announcer role"])) return;
-   
      if (command === 'h!announce') {
-         
-        const announcement = args.slice(1).join(' ');
         
-        const annChannel = message.mentions.channels.first();
+        if (message.member.roles.cache.some(role => role.name === 'announcer role')) {
+            
+            const announcement = args.slice(1).join(' ');
         
-        annChannel.send(announcement); 
+            const annChannel = message.mentions.channels.first();
+        
+            annChannel.send(announcement);
+        } else { message.reply('you don\'t have the role required for this command')
+               }
      }
         
 });

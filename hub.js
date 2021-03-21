@@ -35,7 +35,7 @@ client.on('message', message => {
                }
      }
     
-    if (message.content === 'hello') {
+    if (message.content.toLowerCase() === 'hello') {
         
         if (message.channel.type == 'dm') {
         

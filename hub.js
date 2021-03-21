@@ -6,7 +6,7 @@ client.once('ready', () => {
 
     console.log('i\'m ready for duty!');
 
-    client.user.setActivity('a Book', { type: 'READING' });
+    client.user.setActivity('a bird outside', { type: 'WATCHING' });
 
 });
 

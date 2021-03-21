@@ -35,9 +35,14 @@ client.on('message', message => {
                }
      }
     
-    if (message.content === 'hell0') {
+    if (message.content === 'hello') {
+        
+        if (message.channel.type == 'dm') {
         
         message.reply('yo this what they call sliding in dms\?')
+        
+        } else { return; 
+               }
     }
     
 });

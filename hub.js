@@ -34,7 +34,12 @@ client.on('message', message => {
         } else { message.reply('you don\'t have the role required for this command')
                }
      }
+    
+    if (message.content === 'hell0') {
         
+        message.reply('yo this what they call sliding in dms\?')
+    }
+    
 });
 
 client.login(process.env.BOT_TOKEN);

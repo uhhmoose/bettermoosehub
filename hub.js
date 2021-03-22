@@ -48,7 +48,9 @@ client.on('message', message => {
         message.reply(coin[random]);
         
     }
-    
+    if (command === 'h!stab') {
+        message.channel.send('\:stab\:')
+    }
     
 });
 

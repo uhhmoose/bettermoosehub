@@ -52,7 +52,11 @@ client.on('message', message => {
        message.delete() 
        message.channel.send('<a:stab:793030200669634580>')
     }
-    
+    if (command === 'h!vibe') {
+        message.delete()
+        message.channel.send('<a:vibekid_slow:792317854795169802'>)
+    }
+                             
 });
 
 client.login(process.env.BOT_TOKEN);

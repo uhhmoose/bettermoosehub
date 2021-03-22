@@ -12,7 +12,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
     
-  console.log(message.channel.name + message.content + message.member.name)
+  console.log(message.channel.name + ' ' + message.content + ' ' + message.member.username)
 
   const prefix = 'h!'
   

@@ -31,17 +31,17 @@ client.on('message', message => {
             const annChannel = message.mentions.channels.first();
         
             annChannel.send(announcement);
-        } else { message.reply('you don\'t have the role required for this command')
-               }
-     }
-    
+        } else if (!annChannel) {message.reply('please specify what channel to send this to')}
+        else if (!args) {message.reply('please specify what i have to send')}
+        else {message.reply('you don\'t have the role required for this command')}
+    }    
     if (message.content.toLowerCase() === 'hello') {
         
         if (message.channel.type == 'dm') {
         
         message.reply('yo this what they call sliding in dms\?')
         
-        } else { return; 
+        } else { message.channel.send('ello'); 
                }
     }
     if (command === 'h!coinflip') {

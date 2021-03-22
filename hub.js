@@ -54,7 +54,7 @@ client.on('message', message => {
     }
     if (command === 'h!vibe') {
         message.delete()
-        message.channel.send('<a:vibekid_slow:792317854795169802'>)
+        message.channel.send('<a:vibekid_slow:792317854795169802>')
     }
                              
 });

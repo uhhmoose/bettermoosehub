@@ -27,7 +27,7 @@ client.on('message', message => {
             const annChannel = message.mentions.channels.first();
             if (!annChannel) {message.reply('please specify what channel i should send this to')}
             if (!args) {message.reply('please specify what i should be sending')}
-            if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement)}
+            if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement).catch(err => console.log(err))}
             else {message.reply('you don\'t have the role required for the use of this command')}
     }
 

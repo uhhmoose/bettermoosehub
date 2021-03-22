@@ -56,6 +56,10 @@ client.on('message', message => {
         message.delete()
         message.channel.send('<a:vibekid_slow:792317854795169802>')
     }
+    if (command === 'h!heppa') {
+        message.delete()
+        message.channel.send('<a:heppa_mememe:784129965344030739>')
+    }
                              
 });
 

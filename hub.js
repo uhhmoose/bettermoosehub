@@ -49,8 +49,8 @@ client.on('message', message => {
         
     }
     if (command === 'h!stab') {
-        message.channel.send('<a:stab:793030200669634580>')
-        message.delete()
+       message.delete() 
+       message.channel.send('<a:stab:793030200669634580>')
     }
     
 });

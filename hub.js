@@ -12,7 +12,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
     
-  console.log(message)
+  console.log(message.content)
 
   const prefix = 'h!'
   

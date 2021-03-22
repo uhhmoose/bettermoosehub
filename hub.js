@@ -25,10 +25,9 @@ client.on('message', message => {
     if (command === 'h!announce') {
             const announcement = args.slice(1).join(' ');
             const annChannel = message.mentions.channels.first();
-            if (!message.mentions.channels) {message.reply('please specify what channel i should send this to')}
-            if (!args) {message.reply('please specify what i should be sending')}
-        if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement).catch(err => console.log(err))} 
-            else {message.reply('you don\'t have the role required for the use of this command')}
+        if (!annChannel) {message.reply('please specify what channel i should send this to')}
+            else if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement).catch(err => console.log(err))} 
+             else {message.reply('you don\'t have the role required for the use of this command')}
     }
 
     if (message.content.toLowerCase() === 'hello') {

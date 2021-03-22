@@ -23,18 +23,14 @@ client.on('message', message => {
   if (message.author.bot) return;
   
     if (command === 'h!announce') {
-        
-        if (message.member.roles.cache.some(role => role.name === 'announcer role')) {
-            
             const announcement = args.slice(1).join(' ');
-        
             const annChannel = message.mentions.channels.first();
-        
-            annChannel.send(announcement);
-        } else if (!annChannel) {message.reply('please specify what channel to send this to')}
-        else if (!args) {message.reply('please specify what i have to send')}
-        else {message.reply('you don\'t have the role required for this command')}
-    }    
+            if (!annChannel) {message.reply('please specify what channel i should send this to')}
+            if (!args) {message.reply('please specify what i should be sending')}
+            if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement)}
+            else {message.reply('you don\'t have the role required for the use of this command')}
+    }
+
     if (message.content.toLowerCase() === 'hello') {
         
         if (message.channel.type == 'dm') {

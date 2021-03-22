@@ -11,8 +11,9 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    
-  console.log(message.channel.name + ' ' + message.content + ' ' + message.member.username)
+  
+  const user = client.users.cache.get(message.member);
+    console.log(message.channel.name + message.content + user.username)
 
   const prefix = 'h!'
   

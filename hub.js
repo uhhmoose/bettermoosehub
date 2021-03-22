@@ -11,6 +11,8 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
+    
+  console.log(message)
 
   const prefix = 'h!'
   

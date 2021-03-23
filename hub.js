@@ -12,7 +12,8 @@ client.once('ready', () => {
 
 client.on('message', message => {
   
-
+  const yam = client.users.cache.find(user => user.id === '546391390951571480')
+  console.log(yam.prescence.status);
 
   const prefix = 'h!'
   

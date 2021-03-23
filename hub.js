@@ -11,9 +11,9 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-  
-  const user = client.users.cache.find(user => user.id === '546391390951571480')
-      console.log(user.prescence.status)
+    
+    const yam = client.users.cache.some(user => user.id === '546391390951571480')
+    console.log(yam.prescence.status).catch(err => console.log(err)) 
     
   const prefix = 'h!'
   

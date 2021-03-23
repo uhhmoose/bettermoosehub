@@ -12,9 +12,6 @@ client.once('ready', () => {
 
 client.on('message', message => {
     
-    const yam = client.users.cache.some(user => user.id === '546391390951571480')
-    console.log(yam.prescence.status).catch(err => console.log(err)) 
-    
   const prefix = 'h!'
   
   const messageArray = message.content.split(' ');

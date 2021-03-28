@@ -27,7 +27,7 @@ client.on('message', message => {
             const annChannel = message.mentions.channels.first();
         if (!annChannel) {message.reply('please specify what channel i should send this to'); return;};
         if (!announcement) {message.reply('please specify what i should be sending'); return;};
-           if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement).catch(err => console.log(err)) {message.reply('err, an error has occured while sending your message. please try again.')}} 
+           if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement).catch(err => console.log(err))} 
              else {message.reply('you don\'t have the role required for the use of this command')}
     }
 

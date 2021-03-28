@@ -22,7 +22,7 @@ client.on('message', message => {
     
   if (message.author.bot) return;
   
-    if (command === 'h!announce') {
+    if (command === 'h!say') {
             const announcement = args.slice(1).join(' ');
             const annChannel = message.mentions.channels.first();
         if (!annChannel) {message.reply('please specify what channel i should send this to'); return;};

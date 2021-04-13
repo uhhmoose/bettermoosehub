@@ -81,6 +81,10 @@ client.on('message', message => {
         message.delete()
         message.reply('your message has been deleted for no reason at all \:\)')        
     }
+    if (message.content.toLowerCase().includes('rayan')) {
+        message.delete()
+        message.reply('never say that in this household again \>\:\(')        
+    }
           
 });
 

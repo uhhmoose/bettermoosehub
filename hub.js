@@ -63,8 +63,24 @@ client.on('message', message => {
     }
     if (message.content.toLowerCase().includes('ihlaal')) {
         message.delete()
-        message.reply('your message has been deleted for no reason at all')        
-}
+        message.reply('your message has been deleted for no reason at all \:\)')        
+    }
+    if (message.content.toLowerCase().includes('hasna')) {
+        message.delete()
+        message.reply('your message has been deleted for no reason at all \:\)')        
+    }
+    if (message.content.toLowerCase().includes('nuya')) {
+        message.delete()
+        message.reply('your message has been deleted for no reason at all \:\)')        
+    }
+    if (message.content.toLowerCase().includes('ryan')) {
+        message.delete()
+        message.reply('your message has been deleted for no reason at all \:\)')        
+    }
+    if (message.content.toLowerCase().includes('mafaaz')) {
+        message.delete()
+        message.reply('your message has been deleted for no reason at all \:\)')        
+    }
           
 });
 

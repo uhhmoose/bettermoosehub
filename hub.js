@@ -65,7 +65,7 @@ client.on('message', message => {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
     }
-    if (message.content.toLowerCase().includes(`${badwords}`)) {
+    if (message.content.toLowerCase().includes(badwords)) {
         message.delete
         message.reply('i\'m not mad. just disappointed. stop swearing')
     }

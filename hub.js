@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 
+const { prefix, badwords } = require('./config.json');
+
 const client = new Discord.Client();
 
 client.once('ready', () => {
@@ -11,8 +13,6 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    
-  const prefix = 'h!'
   
   const messageArray = message.content.split(' ');
   
@@ -22,7 +22,7 @@ client.on('message', message => {
     
   if (message.author.bot) return;
   
-    if (command === 'h!say') {
+    if (command === '${prefix}say') {
             const announcement = args.slice(1).join(' ');
             const annChannel = message.mentions.channels.first();
         if (!annChannel) {message.reply('please specify what channel i should send this to'); return;};
@@ -40,7 +40,7 @@ client.on('message', message => {
         } else { message.channel.send('ello'); 
                }
     }
-    if (command === 'h!coinflip') {
+    if (command === '${prefix}coinflip') {
 
         const coin = ['you got heads', 'you got tails'];
 
@@ -49,21 +49,25 @@ client.on('message', message => {
         message.reply(coin[random]);
         
     }
-    if (command === 'h!stab') {
+    if (command === '${prefix}stab') {
        message.delete() 
        message.channel.send('<a:stab:793030200669634580>')
     }
-    if (command === 'h!vibe') {
+    if (command === '${prefix}vibe') {
         message.delete()
         message.channel.send('<a:vibekid_slow:792317854795169802>')
     }
-    if (command === 'h!heppa') {
+    if (command === '${prefix}heppa') {
         message.delete()
         message.channel.send('<a:heppa_mememe:784129965344030739>')
     }
     if (message.content.toLowerCase().includes('rayan')) {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
+    }
+    if (message.content.toLowerCase().includes('${badwords}')) {
+        message.delete
+        message.reply('i\'m not mad. just disappointed. stop swearing')
     }
           
 });

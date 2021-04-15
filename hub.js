@@ -65,6 +65,10 @@ client.on('message', message => {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
     }
+    if (message.content.toLowerCase().includes('mishiya')) {
+        message.delete()
+        message.reply('never say that in this household again \>\:\(')        
+    }
     if (message.content) {
         const profane = !!badwords.find((word) => {
           const regex = new RegExp(`\\b${word}\\b`, 'i'); // if the phrase is not alphanumerical,

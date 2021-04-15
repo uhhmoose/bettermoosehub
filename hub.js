@@ -61,26 +61,6 @@ client.on('message', message => {
         message.delete()
         message.channel.send('<a:heppa_mememe:784129965344030739>')
     }
-    if (message.content.toLowerCase().includes('ihlaal')) {
-        message.delete()
-        message.reply('your message has been deleted for no reason at all \:\)')        
-    }
-    if (message.content.toLowerCase().includes('hasna')) {
-        message.delete()
-        message.reply('your message has been deleted for no reason at all \:\)')        
-    }
-    if (message.content.toLowerCase().includes('nuya')) {
-        message.delete()
-        message.reply('your message has been deleted for no reason at all \:\)')        
-    }
-    if (message.content.toLowerCase().includes('ryan')) {
-        message.delete()
-        message.reply('your message has been deleted for no reason at all \:\)')        
-    }
-    if (message.content.toLowerCase().includes('mafaaz')) {
-        message.delete()
-        message.reply('your message has been deleted for no reason at all \:\)')        
-    }
     if (message.content.toLowerCase().includes('rayan')) {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        

@@ -65,11 +65,18 @@ client.on('message', message => {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
     }
-    if (message.content.toLowerCase().includes(badwords)) {
-        message.delete
-        message.reply('i\'m not mad. just disappointed. stop swearing')
-    }
-          
+    if (message.content) {
+        const profane = !!badwords.find((word) => {
+          const regex = new RegExp(`\\b${word}\\b`, 'i'); // if the phrase is not alphanumerical,
+          return regex.test(message.content);             // you may need to escape tokens
+        });
+    
+        if (profane) {
+            message.reply('i\'m not mad. just disappointed. stop swearing')
+            message.delete()
+            .catch(console.error);
+        }
+      }      
 });
 
 client.login(process.env.BOT_TOKEN);

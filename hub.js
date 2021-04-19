@@ -21,7 +21,27 @@ client.on('message', message => {
   const args = messageArray.slice(1);  
     
   if (message.author.bot) return;
-  
+    
+    if (command === `${prefix}help`) {
+    message.channel.send({embed: {
+color: 3447003,
+author: {
+  name: client.user.username,
+  icon_url: client.user.avatarURL
+},
+title: "Help Command Test",
+description: "just testing.",
+fields: [{
+    name: "h!say",
+    value: "format\:\`h!say \{\#channel\} \(what you want him to say in the specified channel)\`"
+  }
+],
+timestamp: new Date(),
+footer: {
+  icon_url: client.user.avatarURL,
+  text: "© moosehub"
+}
+}})}
     if (command === `${prefix}say`) {
             const announcement = args.slice(1).join(' ');
             const annChannel = message.mentions.channels.first();

@@ -61,6 +61,10 @@ client.on('message', message => {
         message.delete()
         message.channel.send('<a:heppa_mememe:784129965344030739>')
     }
+    if (command === `${prefix}rindhoo`) {
+        message.delete()
+        message.channel.send('<a:rindhoo:792421810142445618>')
+    }
     if (message.content.toLowerCase().includes('rayan')) {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        

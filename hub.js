@@ -27,7 +27,7 @@ client.on('message', message => {
 color: 3447003,
 author: {
   name: client.user.username,
-  icon_url: client.user.avatarURL
+  icon_url: "https://cdn.discordapp.com/avatars/770559351093985290/11b3d037594b9ea746bf52c764bb19a1.png?size=1024"
 },
 title: "Help Command Test",
 description: "just testing.",

@@ -38,8 +38,8 @@ fields: [{
 ],
 timestamp: new Date(),
 footer: {
-  icon_url: client.user.avatarURL,
-  text: "© moosehub"
+  icon_url: "https://cdn.discordapp.com/avatars/770559351093985290/11b3d037594b9ea746bf52c764bb19a1.png?size=1024",
+  text: "moosehub ©"
 }
 }})}
     if (command === `${prefix}say`) {

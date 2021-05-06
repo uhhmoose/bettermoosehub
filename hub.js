@@ -93,18 +93,18 @@ footer: {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
     }
-    if (message.content) {
-        const profane = !!badwords.find((word) => {
-          const regex = new RegExp(`\\b${word}\\b`, 'i'); // if the phrase is not alphanumerical,
-          return regex.test(message.content);             // you may need to escape tokens
-        });
+    //if (message.content) {
+    //    const profane = !!badwords.find((word) => {
+    //      const regex = new RegExp(`\\b${word}\\b`, 'i'); // if the phrase is not alphanumerical,
+    //      return regex.test(message.content);             // you may need to escape tokens
+    //    });
     
-        if (profane) {
-            message.reply('i\'m not mad. just disappointed. stop swearing')
-            message.delete()
-            .catch(console.error);
-        }
-      }      
+    //    if (profane) {
+    //        message.reply('i\'m not mad. just disappointed. stop swearing')
+    //        message.delete()
+    //        .catch(console.error);
+    //    }
+    //  }      
 });
 
 client.login(process.env.BOT_TOKEN);

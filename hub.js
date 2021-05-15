@@ -93,9 +93,9 @@ footer: {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
     }
-    //if (command === `${prefix}direct`) {
-    //    client.users.cache.get(``).send('hello <a:rindhoo:792421810142445618>')
-    //}
+    if (command === `${prefix}direct`) {
+        client.users.cache.get(`713556222506434621`).send('hello <a:rindhoo:792421810142445618>')
+    }
     
     //if (message.content) {
     //    const profane = !!badwords.find((word) => {

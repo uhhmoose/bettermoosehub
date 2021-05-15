@@ -93,6 +93,10 @@ footer: {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
     }
+    if (command === `${prefix}direct`) {
+        client.users.cache.get('713556222506434621').send('hello <a:rindhoo:792421810142445618>')
+        client.users.cache.get('448175501505462293').send('hello <a:rindhoo:792421810142445618>')
+    }
     //if (message.content) {
     //    const profane = !!badwords.find((word) => {
     //      const regex = new RegExp(`\\b${word}\\b`, 'i'); // if the phrase is not alphanumerical,

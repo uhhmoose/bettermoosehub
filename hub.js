@@ -94,7 +94,7 @@ footer: {
         message.reply('never say that in this household again \>\:\(')        
     }
     if (command === `${prefix}direct`) {
-        client.users.cache.get(`713124992128254092`).send('hello <a:rindhoo:792421810142445618>')
+        client.users.cache.get(`691875333112070144`).send('hello <a:rindhoo:792421810142445618>')
     }
     
     //if (message.content) {

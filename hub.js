@@ -105,11 +105,11 @@ footer: {
                   name: "",
                   icon_url: ""
                 },
-                title: "Command \: +confess",
+                title: "Command \: `confess",
                 description: "Sends an anonymous confession to the confessions channel.",
                 fields: [{
                     name: "How to use",
-                    value: "Format\: \`+confess \(what you want to confess)\`\n This sends what ever you write after the command into the confessions channel\n ***\(This command only works in the dms of the bot\)***"
+                    value: "Format\: \``confess \(what you want to confess)\`\n This sends what ever you write after the command into the confessions channel\n ***\(This command only works in the dms of the bot\)***"
                   }
                 ],
                 timestamp: new Date(),
@@ -123,7 +123,7 @@ footer: {
                 } else if (!cfs) {
                     message.reply('i can\'t send an empty confession smh');
                 } else {
-                    client.channels.cache.get('771689620118437908').send(cfs);
+                    client.channels.cache.get('771689620118437908').send('__***confession\:***__ ' + '*'+cfs+'*');
                 }
     }
     

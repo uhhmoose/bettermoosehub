@@ -123,7 +123,7 @@ footer: {
                 } else if (!cfs) {
                     message.reply('i can\'t send an empty confession smh');
                 } else {
-                    client.channels.cache.get('771689620118437908').send('__***confession\:***__ ' + '*'+cfs+'*');
+                    client.channels.cache.get('852463150283358228').send('__***confession\:***__ ' + '*'+cfs+'*');
                 }
     }
     

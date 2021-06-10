@@ -100,7 +100,7 @@ footer: {
         const cfs = args.join(' ');
         if (message.channel.type != 'dm' && !cfs ) {
             message.channel.send({embed: {
-                color: '#000000',
+                color: '#ffb7c5',
                 author: {
                   name: "",
                   icon_url: ""

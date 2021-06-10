@@ -105,7 +105,7 @@ footer: {
                   name: "",
                   icon_url: ""
                 },
-                title: "Command \: `confess",
+                title: "Command \: m+confess",
                 description: "Sends an anonymous confession to the confessions channel.",
                 fields: [{
                     name: "How to use",

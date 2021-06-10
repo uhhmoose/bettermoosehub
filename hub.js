@@ -32,8 +32,8 @@ author: {
 title: "Help Command Test",
 description: "just testing.",
 fields: [{
-    name: "h!say",
-    value: "format\:\`h!say \{\#channel\} \(what you want him to say in the specified channel)\`"
+    name: "stop",
+    value: "i want to.....`"
   }
 ],
 timestamp: new Date(),
@@ -109,7 +109,7 @@ footer: {
                 description: "Sends an anonymous confession to the confessions channel.",
                 fields: [{
                     name: "How to use",
-                    value: "Format\: \`${prefix}confess \(what you want to confess)\`\n This sends what ever you write after the command into the confessions channel\n ***\(This command only works in the dms of the bot\)***"
+                    value: "Format\: \`m+confess \(what you want to confess)\`\n This sends what ever you write after the command into the confessions channel\n ***\(This command only works in the dms of the bot\)***"
                   }
                 ],
                 timestamp: new Date(),

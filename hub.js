@@ -21,34 +21,28 @@ client.on('message', message => {
   const args = messageArray.slice(1);  
     
   if (message.author.bot) return;
-    
-    if (command === `${prefix}help`) {
-    message.channel.send({embed: {
-color: 3447003,
-author: {
-  name: client.user.username,
-  icon_url: "https://cdn.discordapp.com/avatars/770559351093985290/11b3d037594b9ea746bf52c764bb19a1.png?size=1024"
-},
-title: "Help Command Test",
-description: "just testing.",
-fields: [{
-    name: "stop",
-    value: "i want to.....`"
-  }
-],
-timestamp: new Date(),
-footer: {
-  icon_url: "https://cdn.discordapp.com/avatars/770559351093985290/11b3d037594b9ea746bf52c764bb19a1.png?size=1024",
-  text: "moosehub ©"
-}
-}})}
-    if (command === `${prefix}say`) {
-            const announcement = args.slice(1).join(' ');
-            const annChannel = message.mentions.channels.first();
-        if (!annChannel) {message.reply('please specify what channel i should send this to'); return;};
-        if (!announcement) {message.reply('please specify what i should be sending'); return;};
-           if (message.member.roles.cache.some(role => role.name === 'announcer role')) {annChannel.send(announcement).catch(err => console.log(err))} 
-             else {message.reply('you don\'t have the role required for the use of this command')}
+
+   if (command === `${prefix}say`) {
+        const announcement = args.slice(1).join(' ');
+        const announcement1 = args.join(' ');
+        const annChannel = message.mentions.channels.first();
+        if (!message.member.roles.cache.some(role => role.name === 'announcer role')) {
+            message.reply('you don\'t have the role required for the use of this command!')
+            return
+        }
+        if (!announcement && !announcement1){
+            message.reply('i can\'t send an empty message smh..')
+            return
+        }
+        if (!announcement) {
+            message.reply('i can\'t send an empty message smh..')
+            return
+        }
+        if (!annChannel && message.content.includes(announcement1)) {
+            message.channel.send(announcement1)
+        } else {
+            annChannel.send(announcement).catch(err => console.log(err))
+        }
     }
 
     if (message.content.toLowerCase() === 'hello') {
@@ -57,7 +51,7 @@ footer: {
         
         message.reply('yo this what they call sliding in dms\?')
         
-        } else { message.channel.send('ello'); 
+        } else { message.channel.send('hi\:\)'); 
                }
     }
     if (command === `${prefix}coinflip`) {
@@ -69,22 +63,6 @@ footer: {
         message.reply(coin[random]);
         
     }
-    if (command === `${prefix}stab`) {
-       message.delete() 
-       message.channel.send('<a:stab:793030200669634580>')
-    }
-    if (command === `${prefix}vibe`) {
-        message.delete()
-        message.channel.send('<a:vibekid_slow:792317854795169802>')
-    }
-    if (command === `${prefix}heppa`) {
-        message.delete()
-        message.channel.send('<a:heppa_mememe:784129965344030739>')
-    }
-    if (command === `${prefix}rindhoo`) {
-        message.delete()
-        message.channel.send('<a:rindhoo:792421810142445618>')
-    }
     if (message.content.toLowerCase().includes('rayan')) {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
@@ -92,9 +70,6 @@ footer: {
     if (message.content.toLowerCase().includes('mishiya')) {
         message.delete()
         message.reply('never say that in this household again \>\:\(')        
-    }
-    if (command === `${prefix}direct`) {
-        client.users.cache.get(`691875333112070144`).send('hello <a:rindhoo:792421810142445618>')
     }
     if (command === `${prefix}confess`) {
         const cfs = args.join(' ');
@@ -129,8 +104,8 @@ footer: {
     
     //if (message.content) {
     //    const profane = !!badwords.find((word) => {
-    //      const regex = new RegExp(`\\b${word}\\b`, 'i'); // if the phrase is not alphanumerical,
-    //      return regex.test(message.content);             // you may need to escape tokens
+    //      const regex = new RegExp(`\\b${word}\\b`, 'i'); // ,
+    //      return regex.test(message.content);             // 
     //    });
     
     //    if (profane) {

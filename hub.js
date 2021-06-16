@@ -30,11 +30,11 @@ client.on('message', message => {
             message.reply('you don\'t have the role required for the use of this command!')
             return
         }
-        if (!announcement && !announcement1){
+        if (!announcement1){
             message.reply('i can\'t send an empty message smh..')
             return
         }
-        if (!announcement) {
+        if (!announcement && message.content.includes(annChannel)) {
             message.reply('i can\'t send an empty message smh..')
             return
         }

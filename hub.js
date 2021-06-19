@@ -45,14 +45,14 @@ client.on('message', message => {
         }
     }
 
-    if (message.content.toLowerCase() === 'hello') {
-        
+    if (message.content.toLowerCase() === 'hello' || message.content.toLowerCase() === 'hi' || message.content.toLowerCase() === 'hey') {
         if (message.channel.type == 'dm') {
-        
         message.reply('yo this what they call sliding in dms\?')
-        
-        } else { message.channel.send('hi\:\)'); 
-               }
+        } else {
+            const greetings = ["hi\:\)", "hello", "hi", "hey sexy\;\)", "what\'s up sexy\;\)", "hello\:\)", "what\'s up", "hey\;\)", "hey", "hey\:\)"]
+            const rndm = Math.floor(Math.random()*greetings.length)
+            message.channel.send(greetings[rndm])
+        }
     }
     if (command === `${prefix}coinflip`) {
 

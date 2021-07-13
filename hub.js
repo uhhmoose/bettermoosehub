@@ -13,6 +13,12 @@ client.once("ready", () => {
 });
 
 client.on("message", message => {
+  const currentDate = new Date();
+
+  const owner = client.users.cache.find(
+    user => user.id === "448175501505462293"
+  );
+
   const messageArray = message.content.split(" ");
 
   const command = messageArray[0];
@@ -45,7 +51,28 @@ client.on("message", message => {
       message.delete();
       message.channel.send(announcement1);
     } else {
-      annChannel.send(announcement).catch(err => console.log(err));
+      annChannel.send(announcement).catch(error => {
+        console.log(error);
+        message.channel.send(
+          "`❌Function returned an error: " + error.message + "`"
+        );
+        let warnembed = new Discord.MessageEmbed()
+          .setColor("#ffb7c5")
+          .setTimestamp()
+          .setTitle("❌ Error Report ❌")
+          .setDescription(
+            "From: " +
+              message.author.tag +
+              "\nAt: " +
+              currentDate.toLocaleString() +
+              "\nMessage: " +
+              message.content +
+              "\nError Type: " +
+              error.message
+          )
+          .setThumbnail();
+        owner.send(warnembed);
+      });
     }
   }
 
@@ -105,7 +132,28 @@ client.on("message", message => {
         .setThumbnail(
           "https://cdn.discordapp.com/attachments/774268269866909698/859793992631582720/ac65wAAAABJRU5ErkJggg.png"
         );
-      message.channel.send(embed);
+      message.channel.send(embed).catch(error => {
+        console.log(error);
+        message.channel.send(
+          "`❌Function returned an error: " + error.message + "`"
+        );
+        let warnembed = new Discord.MessageEmbed()
+          .setColor("#ffb7c5")
+          .setTimestamp()
+          .setTitle("❌ Error Report ❌")
+          .setDescription(
+            "From: " +
+              message.author.tag +
+              "\nAt: " +
+              currentDate.toLocaleString() +
+              "\nMessage: " +
+              message.content +
+              "\nError Type: " +
+              error.message
+          )
+          .setThumbnail();
+        owner.send(warnembed);
+      });
     } else if (message.channel.type != "dm") {
       message.reply("***this command only works in my dms smh***");
     } else if (!cfs) {
